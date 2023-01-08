@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opration scheduler for hospital management</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <style>
+
+        .logo{
+            font-size: 30px;
+            margin: auto 30px;
+            color: white;
+            border-radius: 15px;
+           
+        }
+        .logo img{
+            height: 60px; 
+            width: 80px;
+             border-radius: 15px;
+             
+        }
+
+        #navbar{
+            height: 80px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            background-color: purple;
+        }
+        #navbar ul{
+            display: flex;
+            list-style-type: none;
+            margin: 15px;
+            font-size: 25px;
+        }
+        #navbar ul li{
+            position: relative;
+            padding: 10px 20px;
+           
+        }
+        #navbar ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        #navbar ul li:hover{
+            background-color: red;
+            
+            border-radius: 15px;
+
+        }
+
+        .active{
+            background-color: red;
+            border-radius: 15px;
+        }
+
+        .main{
+            margin-top: 200px;
+            margin-left: 80px;
+            background-color: aqua;
+            /* background-color: darkgreen; */
+            width: 50%;
+        }
+        .main1{
+          
+           padding-top:30px ;
+           padding-bottom:30px ;
+           padding-left:40px ;
+           padding-right: 40px;
+        }
+
+          .footer{
+           margin-top: 100px;
+           padding-top: 25px;
+           text-align: center;
+           font-size: 20px;
+           background-color: black;
+        }  
+
+        .footer ul{
+
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer ul li{
+            margin: 20px;
+           
+        }
+       .footer ul li a{
+        font-size: 30px;
+       }
+
+       .images{
+
+            /* background-image: url(https://wallpaperaccess.com/full/619997.png); */
+            background-image: url(https://i.pinimg.com/originals/ce/85/7b/ce857b80325bfe263acde9df9f89ab1e.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding-top: 80px;        
+
+       }
+
+       body{
+        background-color: rgb(235, 242, 248);
+        
+       }
+
+
+    </style>
+
+
+<style>
+    
+    @media screen and (max-width:900px) {
+            
+        .logo{
+            font-size: 30px;
+            margin-left: 0px;
+            color: rgb(12, 223, 12);
+            border-radius: 15px;
+           
+        }
+
+
+            #navbar{
+            display: block;
+            text-align: center;
+            background-color: rgb(118, 10, 180);
+        }
+        #navbar ul{
+            display: block;
+           padding-top: 5px;
+            font-size: 20px;
+            list-style-type: none;
+            margin: 15px; 
+        }
+
+        .main{
+            margin-top: 400px;
+           
+        }
+       #navbar ul li a{
+            text-decoration: none;
+            color: rgb(9, 12, 197);
+        }
+        #navbar ul li:hover{
+            background-color: rgb(103, 211, 16);
+            
+            border-radius: 15px;
+
+        }
+
+
+
+        }
+</style>
+
+</head>
+<body>
+
+    <div class="images">
+
+   
+
+    <div class="fixed-top" id="navbar">
+        <span class="logo"><img src="https://i.pinimg.com/474x/b1/fa/ce/b1face532aa7c9d71da773f0811c72f5--doctors-symbols.jpg" alt=""> Opration Schedule</span>
+        <ul>
+            <li class="active"><a href="opration.1.html">Home</a></li>
+            <li><a href="opration.finddoctor.html">Find Doctor</a></li>
+            <li><a href="opration.doctor.html">Doctor</a></li>
+            <li><a href="opration.admin.html">Admin</a></li>
+            <li><a href="opration.Payment.html">Payment</a></li>
+        </ul>
+    </div>
+    
+    
+
+    <main class="main">
+
+        <div class="main1">
+
+            <h2 style="padding-top: 20px; padding-bottom: 20px;">DIAGNOSIS</h2>
+            <!-- <button class="btn btn-danger" style="padding: 8px; font-size: 20px;">Patient Login</button> -->
+            <a href="opration.patient.html" class="btn btn-danger"  style="padding: 8px; font-size: 20px;">Patient Login</a>
+            <p><b class="lh-lg">communication is the key to any good doctor-patient relationship, so if a patient <br>
+                 diagnosis themselves inaccurately. it is importent to approoch the situation with delicacy. <br>
+                 providing the best in patient care and personalized service. to make first visit as <br>
+                 convenient as possible, we invite you to complete the new patient from with our secure <br>
+                 online Patient REgistration Forms prior to oppointment and disease diagnosis </b></p>
+    
+
+        </div>
+
+       
+       
+    </main>
+
+
+    
+   
+
+    <footer class="footer">
+       
+
+            <div class="footer-content">
+                <h3 class="text-white">Thanks for visitingg our website</h3>
+                <p class="text-white">The best hospital in the country where are the bet operations</p>
+                <ul>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+              </ul>
+                <p class="text-white">copyright &copy; opration </p>
+                <p style="padding-bottom: 20px; color: white;"><a href="#"> privecy policy</a></p>
+            </div>
+
+       
+    </footer>
+
+</div>
+
+</body>
+</html>
