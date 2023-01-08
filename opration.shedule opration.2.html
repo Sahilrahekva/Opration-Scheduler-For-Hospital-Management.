@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opration scheduler for hospital management</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <style>
+
+        .logo{
+            font-size: 30px;
+            margin: auto 30px;
+            color: white;
+            border-radius: 15px;
+           
+        }
+        .logo img{
+            height: 60px; 
+            width: 80px;
+             border-radius: 15px;
+             ;
+        }
+
+        #navbar{
+            height: 80px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            background-color: purple;
+            
+        }
+        #navbar ul{
+            display: flex;
+            list-style-type: none;
+            margin: 15px;
+            font-size: 25px;
+        }
+        #navbar ul li{
+            position: relative;
+            padding: 10px 20px;
+           
+        }
+        #navbar ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        #navbar ul li:hover{
+            background-color: red;
+            
+            border-radius: 15px;
+
+        }
+    
+        .active{
+            background-color: red;
+            border-radius: 15px;
+        }
+
+        .main{
+            margin-top: 150px;
+            /* margin-left: 80px; */
+           
+        }
+         
+        .main h1{
+            color: rgb(12, 160, 12);           
+            text-align: center;
+        }
+
+        .main h2{
+            color: rgb(196, 6, 6);
+        }
+
+          .footer{
+           margin-top:150px;
+           padding-top: 25px;
+           text-align: center;
+           font-size: 20px;
+           background-color: black;
+        }  
+
+        .footer ul{
+
+            display: flex;
+            list-style-type: none;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer ul li{
+            margin: 20px;
+           
+        }
+       .footer ul li a{
+        font-size: 30px;
+       }
+
+       .form-group{
+        border: 2px solid black;
+        border-radius: 20px;
+        padding: 25px;
+      
+       }
+
+
+       /* .formcolor input{
+        border: 2px solid rgb(218, 127, 9);
+       } */
+      
+
+
+
+       body{
+        background-color: rgb(236, 241, 245);
+        
+    
+    } 
+
+       /* .col-md-4{
+        font-size: 20px;
+       } */
+
+    </style>
+
+</head>
+<body>
+
+    <div class="images">
+
+   
+
+    <div class="fixed-top" id="navbar">
+        <span class="logo"><img src="https://i.pinimg.com/474x/b1/fa/ce/b1face532aa7c9d71da773f0811c72f5--doctors-symbols.jpg" alt=""> Opration Schedule</span>
+        <ul>
+            <li><a href="opration.1.html">Home</a></li>
+            <li ><a href="opration.finddoctor.html">Find Doctor</a></li>
+            <li><a href="opration.doctor.html">Doctor</a></li>
+            <li><a href="opration.admin.html">Admin</a></li>
+            <li><a href="opration.Payment.html">Payment</a></li>
+        </ul>
+    </div>
+    
+   
+
+    <main class="main">
+
+       <div class="mx-5">
+        <a href="opration.patient.html" class="btn btn-warning mb-5" onclick="logou()">Logout</a>
+       </div>
+
+        <div class="formcolor">
+            <div class="container">
+                <h2 class="text-center py-3">Schedule Opration</h2>
+                <div class="row ">
+                    <div class="col-md-5 m-auto">
+                        <div class="form-group">
+
+                            <!-- <label for="">Name</label> -->
+                            <input type="text" class="form-control" placeholder="Name">
+                            <br>
+                            <!-- <label for="">Mobile no</label> -->
+                            <input type="text" class="form-control" placeholder="Parent/Husband Name">
+                            <br>
+                            <input type="text" class="form-control" placeholder="Age">
+                            <br>
+                            <div class="form-check">
+
+                                <input type="radio" class="form-control-check" id="maleradio" name="gender">
+                                <label for="maleradio" class="form-check-leabel">Male</label>
+
+                                <input type="radio" class="form-control-check" id="femaleradio" name="gender">
+                                <label for="femaleradio" class="form-check-leabel">Female</label>
+
+
+
+                            </div>
+
+                            <br>
+                            <label for="">Date of operation</label>
+                            <input type="date" class="form-control" placeholder="mm/dd/yyyy">
+                            <br>
+                            <input type="text" class="form-control" placeholder="Time">
+                            <br>
+                            <input type="text" class="form-control" placeholder="Ward/Floor/Room No">
+                            <br>
+                            <input type="text" class="form-control" placeholder="Address">
+                            <br>
+                            <input type="text" class="form-control" placeholder="Please state problems and requerment...">
+                            <br>
+                            <div class="row">
+                                <div class="col-md-5">Select Doctor:</div>
+                                <div class="col-md-7">
+                                    <select name="" id="" class="form-control">
+                                        <option value="">Select here</option>
+                                        <option value="">abc...</option>
+                                        <option value="">abc...</option>
+                                        <option value="">abc...</option>
+                                        <option value="">abc...</option>
+                                        <option value="">abc...</option>
+                                        <option value="">abc...</option>
+                                        <option value="">abc...</option>
+                                        <option value="">abc...</option>
+                                        
+                                    </select>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+                                <div class="col-md-5">Select Alternative Doctor:</div>
+                                <div class="col-md-7">
+                                    <select name="" id="" class="form-control">
+                                        <option value="">Select here</option>
+                                        <option value="">abc...</option>
+                                        <option value="">abc...</option>
+                                        <option value="">abc...</option>
+                                        <option value="">abc...</option>
+                                        <option value="">abc...</option>
+                                        <option value="">abc...</option>
+                                        <option value="">abc...</option>
+                                        <option value="">abc...</option>
+                                        
+                                    </select>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <div class="row">
+                                <div class="col-md-5">Patient Type:</div>
+                                <div class="col-md-7">
+                                    <select name="" id="" class="form-control">
+                                        <option value="">Select here</option>
+                                        <option value="">IN</option>
+                                        <option value="">OUT</option>
+                                        
+                                        
+                                    </select>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <input type="text" class="form-control" placeholder="Doctor Suggested">
+
+                            <div class="text-center">
+                                <button class="btn btn-success my-4 text-center px-5" onclick="log()">POST</button>
+
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+        
+              
+
+
+
+       
+    </main>
+
+   
+
+    <footer class="footer">
+       
+
+            <div class="footer-content">
+                <h3 class="text-white">Thanks for visitingg our website</h3>
+                <p class="text-white">The best hospital in the country where are the bet operations</p>
+                <ul>
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+              </ul>
+                <p class="text-white">copyright &copy; opration </p>
+                <p style="padding-bottom: 20px; color: white;"><a href="#"> privecy policy</a></p>
+            </div>
+
+       
+    </footer>
+
+</div>
+
+    <!-- in this padge i use dummy text means the doctors information is not real -->
+
+    <script>
+        function logou() {
+
+            alert("logout successfully");
+
+        }
+    </script>
+
+<script>
+    function log() {
+
+        alert("Opration shedule conformed");
+
+    }
+</script>
+
+
+</body>
+</html>
